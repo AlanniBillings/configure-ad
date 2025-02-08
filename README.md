@@ -72,8 +72,6 @@ We need to create a resource group which will act as our folder that organizes a
 </p>
 <br /> 
 
-</p>
-<br />
 
 <p>
 
@@ -85,74 +83,74 @@ Bypass the other pages without clicking or changing anything and click “create
 </p>
 <br /> 
 
+<p>
+
+  ![image](https://github.com/user-attachments/assets/382268c0-0508-4d31-a8c4-7b48633c5d4e)
+
 </p>
-<br />
+<p>
+<h3>Creating VM “DC-1”:</h3>
+  To create our first virtual machine, repeat the first steps from our previous creations to locate and state creating. Then, after confirming the resource group is “Active-Directory-Lab”, name the VM “DC-1”. Again, the DC is our domain controller which will be the brain of AD allowing it to function and manage our client. **Remember**, it is important that your region is “East US 2” so that it works on the virtual network we finished previously. 
+
+
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+  ![image](https://github.com/user-attachments/assets/b610cb49-f31f-47d9-99ee-38d88ec75c64)
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+  For our “image” select “Windows Server 2022 Datacenter: Azure Edition- x64 Gen2”.
+Using Windows Server is detrimental because the DC needs to be managed by AD DS(Active Directory Domain Services) to use Windows Server features like Group Policy and access control for Active Directory. AD DS controls and manages our DC which controls AD (ADDS<DC<AD).  Now select a standard size of at least 2 vCPU. Virtual CPUs pull from your CPU’s core to power your virtual machines. Hypothetically you can use 1 vCPU per virtual machine but using 2 makes ours less likely to run slow while running our testing because of the extra power. Fill in as follows (Username: Labuser / Password: Cyberwiz3456). 
+
+<strong>Note:</strong> If you’re required to change your region to accept the size and/or image necessary, find the acceptable region and exit the screen without creating the VM. You need to delete your resource group and virtual network to create new ones using the region accepted for your VMs. However if you are required to change “zones” to satisfy the size and image then change the zone. A zone is just an area within the network so VMs are allowed to be on the same one or different ones. The redundancy is allowed in case of failures in other zones.
+
+
 </p>
 <br /> 
 
-</p>
-<br />
+<p>
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  ![image](https://github.com/user-attachments/assets/2de4ed53-2401-4895-a564-f18001b2396b)
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Lastly, check the confirmation boxes below to move on to disks and then “networking”. 
 </p>
 <br /> 
 
-</p>
-<br />
+<p>
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  ![image](https://github.com/user-attachments/assets/84ad396f-0469-4c86-a690-20922d07576d)
+
 </p>
 <br /> 
+Confirm that “Active-Directory-VNet” is selected as the virtual network of our virtual machine. Now click “review + create” and create it!
 
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+  ![image](https://github.com/user-attachments/assets/4874c427-4240-48e9-84f1-e9f44d26e51e)
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+<h3>Making DC-1’s NIC Private IP Address Static:</h3>
+  We need to make DC-1’s Private IP address static because it has a dynamic Private IP by default, meaning that it can be likely to change. If the IP changes, then Client-1 will no longer be able to use DC-1 as its DNS server once we create Client-1’s DNS server to use DC-1’s Private IP address. Go to DC-1’s networking settings and click the NIC box. 
+
+<p>
+
+  ![image](https://github.com/user-attachments/assets/80348c5e-9c0f-4337-b74e-a615191dcc2e)
+
+</p>
+<p>
+On the following page click “ipconfig1” and select “static” on the pop-up. Next click save to complete the change.
+
 </p>
 <br /> 
-
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br /> 
-
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br /> 
-
-</p>
-<br />
+<h1>Step 2- Using Remote Desktop to Complete DC-1 Setup</h1>
 
 <p>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
