@@ -28,7 +28,8 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Using Azure: Setup Domain Controller 
 - Using Remote Desktop: Log into DC-1  to Complete Setup
 - Using Azure: Setup Client-1
-- Using Remote Desktop: Open Client-1 to Test Connectivity to DC-1 
+- Using Remote Desktop: Open Client-1 to Test Connectivity to DC-1
+- Using Remote Desktop: Install and Deploy Active Directory
 
 <h2>Deployment and Configuration Steps</h2>
 
@@ -303,7 +304,7 @@ We are going to run “ipconfig /all” because it will tell us all of the detai
 <br /> 
 <h1>Conclusion/ Clean Up </h1>
 
-This concludes the walkthrough for configuring Active Directory in Azure. If you plan on continuing to use these VM’s further than go back to Azure and stop them from running until then. If you’re completely finished, delete the resource group we created to delete everything else as well. I have shown this below. Remember Azure is a pay as you go, so you are charged for resources, including space, that you choose to take up. Forgetting to stop VMs from running or deleting unused resources will result in charges to your card filed onto your account or quickly diminishing credits if you’re still on your free trial
+This concludes the walkthrough for installing and deploying Active Directory in Azure. If you plan on continuing to use these VM’s further than go back to Azure and stop them from running until then. If you’re completely finished, delete the resource group we created to delete everything else as well. I have shown this below. Remember Azure is a pay as you go, so you are charged for resources, including space, that you choose to take up. Forgetting to stop VMs from running or deleting unused resources will result in charges to your card filed onto your account or quickly diminishing credits if you’re still on your free trial
 <p>
 
   ![image](https://github.com/user-attachments/assets/3ddef873-42a6-4443-9d3a-6c27064fb486)
