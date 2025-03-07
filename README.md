@@ -377,154 +377,119 @@ Because DC-1 is the Domain and has been successfully deployed we will need to lo
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+  ![image](https://github.com/user-attachments/assets/19de9cf9-76f2-4a03-81f1-f9c0d4400a4d)
+  ![image](https://github.com/user-attachments/assets/f54fbba4-d7d7-468b-87d9-ff30e015ae28)
+  ![image](https://github.com/user-attachments/assets/14d72981-cc55-4f89-b138-4b6b4bca403c)
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+<strong>Creating OU's:</strong> Right click "mydomain.com", click "new" to create the organizational units <strong>"_EMPLOYEES"</strong> and <strong>"_ADMINS"</strong>.
+  
+  <strong>Note:</strong> It's imperative to label these groups exactly how they are shown for the future when, for example, adding an admin which I will demonstarte here.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+  ![image](https://github.com/user-attachments/assets/c9ae35c6-0ce4-4b0d-88a4-e1d52578f7e0)
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+<strong>Creating An Admin User:</strong> First, right click "_ADMINS", click "new" and "user". 
+<br />
+
+<p>
+
+  ![image](https://github.com/user-attachments/assets/33cb7a24-402d-4c65-938c-d08388c5a825)
+
+</p>
+<p>
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+  ![image](https://github.com/user-attachments/assets/32d40108-19e7-4f05-8613-467a5cae3530)
+  ![image](https://github.com/user-attachments/assets/e21a3c17-0c9e-4277-92d0-5607bea65caf)
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Make her password "Cyberwiz3456". Then deselect "user must change password at next login" and select that the passowrd never expires if you'd like. This isn't something you would do in real life but may be used for the conveinience of modeling it here for all intents and purposes.
+  </p>
+<br />
+
+<p>
+
+  ![image](https://github.com/user-attachments/assets/6629d9e4-0e05-416e-9f25-1989673c6f28)
+  ![image](https://github.com/user-attachments/assets/81ccb8ad-eb90-44b4-8d22-9f3690776a61)
+
+</p>
+<p>
+Under "_ADMINS" right click "jane_admin" and go to her user properties. Navigate to "member of" and add her to the Domain Admins security group. After adding it, type "domain admins" and check the name. Next, confirm everthing by selecting apply. Finally, log out and log back in as "mydomain.com\jane_admin". This will be the admin account I use for the rest of the demonstration.
+
+  <strong>Note:</strong> Use the proper slash! In the screeshot, at the very bottom, I  accidently put the wrong slash initally but corrected it with the proper slash (\) at the top. The typo populates a double "mydomain.com".
+</p>
+<br />
+
+<strong>Joining Client-1 to the Domain: "mydomain.com"</strong> 
+
+<p>
+
+  ![image](https://github.com/user-attachments/assets/7ba18850-3e97-4953-8a3f-172ad8f554e5)
+
+</p>
+<p>
+Login to Client-1 as "Labuser" and use the same password from previous logins (Cyberwiz3456).
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+  ![image](https://github.com/user-attachments/assets/f4b41d75-0ec9-4703-ac4a-2a1f39569200)
+  ![image](https://github.com/user-attachments/assets/634eb651-bf5b-40c5-a6e6-8b7c6274c02f)
+  ![image](https://github.com/user-attachments/assets/a9789d70-a9f0-464f-94e8-38658de27576)
+  ![image](https://github.com/user-attachments/assets/432d460d-0c28-4345-89d4-ba02addb6f34)
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+1. Go Under the computer's system and select "Rename this PC (advanced).
+2. Make Client-1 a member of "mydomain.com" under "domain".
+3. Enter Jane Does name and password(Cyberwiz3456) because she is an admin, so she will have permissions to access to the domain. 
 </p>
 <br />
 
+<strong>Confirm Client-1 has been Successfully Added</strong> 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+  ![image](https://github.com/user-attachments/assets/ceefe776-3e41-4e19-8b17-3ed040b833bc)
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+1. Under DC-1 as "mydomain.com\jane_admin" go back to Active Directory Users and Computers.
+2. Go to "Computers" under the domain and observe that Client-1 has succefully be added as a computer on the domain.I also observed the properties of the computer there too. 
+  
 </p>
 <br />
 
+<strong>Creating a "_CLIENTS" Folder </strong> 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+  ![image](https://github.com/user-attachments/assets/88f1b3af-a7cf-4305-aeb6-00f2d9a99fb9)
+  ![image](https://github.com/user-attachments/assets/2fa1adcb-919a-4be3-af02-4e47d135bd23)
+  ![image](https://github.com/user-attachments/assets/ee504a7b-14c0-457e-908d-bae2fa2c8b29)
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+1. Create "_CLIENTS" under OU's for future clients to be oorganized here.
+2. Under "computers" move Client-1 to the "_CLIENTS" folder and confirm this.
+3. Now right click "mydomain.com" to refresh the folder and see eveything organized.
 </p>
 <br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-
 
 <h1>Conclusion/ Clean Up </h1>
 
-This concludes the walkthrough for installing and deploying Active Directory in Azure. If you plan on continuing to use these VM’s further than go back to Azure and stop them from running until then. If you’re completely finished, delete the resource group we created to delete everything else as well. I have shown this below. Remember Azure is a pay as you go, so you are charged for resources, including space, that you choose to take up. Forgetting to stop VMs from running or deleting unused resources will result in charges to your card filed onto your account or quickly diminishing credits if you’re still on your free trial
+This concludes the walkthrough for installing and deploying Active Directory in Azure. If you plan on continuing to use these VM’s further to add useres and paratice troubleshooting, then go back to Azure and stop them from running. If you’re completely finished, delete the resource group we created to delete everything else as well. I have shown this below. Remember Azure is a pay as you go, so you are charged for resources, including space, that you choose to take up. Forgetting to stop VMs from running or deleting unused resources will result in charges to your card filed onto your account or quickly diminishing credits if you’re still on your free trial.
 <p>
 
   ![image](https://github.com/user-attachments/assets/3ddef873-42a6-4443-9d3a-6c27064fb486)
