@@ -454,7 +454,9 @@ Login to Client-1 as "Labuser" and use the same password from previous logins (C
 </p>
 <p>
 1. Go Under the computer's system and select "Rename this PC (advanced).
+
 2. Make Client-1 a member of "mydomain.com" under "domain".
+
 3. Enter Jane Does name and password(Cyberwiz3456) because she is an admin, so she will have permissions to access to the domain. 
 </p>
 <br />
@@ -467,6 +469,7 @@ Login to Client-1 as "Labuser" and use the same password from previous logins (C
 </p>
 <p>
 1. Under DC-1 as "mydomain.com\jane_admin" go back to Active Directory Users and Computers.
+
 2. Go to "Computers" under the domain and observe that Client-1 has succefully be added as a computer on the domain.I also observed the properties of the computer there too. 
   
 </p>
@@ -482,7 +485,9 @@ Login to Client-1 as "Labuser" and use the same password from previous logins (C
 </p>
 <p>
 1. Create "_CLIENTS" under OU's for future clients to be oorganized here.
-2. Under "computers" move Client-1 to the "_CLIENTS" folder and confirm this.
+
+2. Under "computers" drag Client-1 to the "_CLIENTS" folder and confirm this.
+
 3. Now right click "mydomain.com" to refresh the folder and see eveything organized.
 </p>
 <br />
