@@ -351,7 +351,7 @@ Once the ADDS roles and features have been installed you will select the flag in
 
 </p>
 <p>
-Deselect the option to create a DNS delegation. Keep clicking next until the prerequisites check is running. Click next to instalaton.
+Deselect the option to create a DNS delegation. Keep clicking next until the prerequisites check is running. Click next to installaton.
 </p>
 <br />
 
@@ -361,15 +361,18 @@ Deselect the option to create a DNS delegation. Keep clicking next until the pre
 
 </p>
 <p>
-Run the instal.
+Run the install and let the DC-1 VM automatically restart.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+  ![image](https://github.com/user-attachments/assets/b05e92bc-011a-4abb-8d01-da3c6c386d66)
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptat
+Because DC-1 is the Domain and has been successfully deployed we will need to login under our specific domain. We want to specify our login apart from a local admin. Log back into DC-1 as "mydomain.com\ur username". Mine would be "mydomain.com\Labuser", using the same password "Cyberwiz3456". Click the start button (4 windows), click "Windows Administarative Tools", and open "Active Directory Users and Computers (ADUC)".
+
 </p>
 <br />
 
